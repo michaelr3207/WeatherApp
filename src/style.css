@@ -1,0 +1,39 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    background: linear-gradient(237deg, #1f0404, rgb(10, 10, 47));
+    margin: 0;
+    height: 100%;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.appContainer {
+    margin: auto;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    border: 2px solid red;
+    width: 35%;
+    height: 65%;
+    margin-top: 10%;
+}
+
+.firstRow {
+    grid-row: 1 / 1;
+    border: 2px solid yellow;
+}
+
+
+.secondRow {
+    grid-row: 2 / 2;
+    border: 2px solid rgba(26, 255, 0, 0.65);
+}
+
+
+.thirdRow {
+    grid-row: 3 / 3;
+    border: 1px solid #1b4659;
+}
