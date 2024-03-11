@@ -13,8 +13,8 @@ async function generateWeatherData() {
         const response = await fetch(API_URL + currentSubject, {mode: 'cors'});
         const fetchedData = await response.json();
         console.log(fetchedData);
-        // alert(fetchedData.location.country);
-
+        alert(fetchedData.location.country);
+        return fetchedData;
         //he
     }
     catch (error) {
