@@ -2,11 +2,10 @@
 
 class WeatherLocation {
 
-    constructor(name, temperature, description, weatherDetail) {
-        this._name = name;
-        this._temperature = temperature;
-        this._description = description;
-        this._weatherDetail = weatherDetail;
+    constructor(name, temperature, description) {
+        this.name = name;
+        this.temperature = temperature;
+        this.description = description;
     }
 
     getName() {
@@ -41,3 +40,5 @@ class WeatherLocation {
         this.weatherDetail = value;
     }
 }
+
+export {WeatherLocation};

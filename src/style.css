@@ -14,7 +14,7 @@ body, html {
 .appContainer {
     margin: auto;
     display: grid;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-rows: 0.5fr 2fr 0.6fr;
     border: 2px solid #110101;
     width: 35%;
     height: 75%;
@@ -56,9 +56,44 @@ body, html {
 
 
 .secondRow {
+    padding-top: 3%;
     grid-row: 2 / 2;
     border: 2px solid #d2d2d2;
+}
 
+.temperatureDiv {
+    /*border: 2px solid coral;*/
+    width: 35%;
+    height: 20%;
+    margin: auto;
+    color: black;
+    font-size: 500%;
+    text-align: center;
+    margin-top: 2%;
+
+}
+
+.weatherDetailDiv {
+    /*border: 2px solid yellow;*/
+    width: 35%;
+    height: 10%;
+    margin: auto;
+    color: black;
+    margin-top: 2%;
+    text-align: center;
+    font-size: 200%;
+}
+
+
+.locationDiv {
+    /*border: 2px solid yellow;*/
+    width: 42%;
+    height: 10%;
+    margin: auto;
+    color: black;
+    margin-top: 2%;
+    text-align: center;
+    font-size: 200%;
 }
 
 
@@ -78,6 +113,13 @@ body, html {
 .temperatureSection {
     grid-column: 2 / 2;
     border: 2px solid red;
+}
+
+.weatherImage {
+    border: 2px solid gold;
+    width: 35%;
+    height: 35%;
+    margin: auto;
 }
 
 

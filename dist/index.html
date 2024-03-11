@@ -5,18 +5,29 @@
     <title>Weather App</title>
 </head>
 <body>
-    <div class="appContainer">
+    <div id="app" class="appContainer">
         <div class="firstRow">
             <div class="appTitle">
                 Weather App
             </div>
             <div class="searchButtonBox">
-                <button>SEARCH</button>
+                <button id="searchButton">SEARCH</button>
             </div>
         </div>
 
         <div class="secondRow">
+            <div id="weatherImage" class="weatherImage">
 
+            </div>
+            <div id="temperature" class="temperatureDiv">
+                13 C
+            </div>
+            <div id="detail" class="weatherDetailDiv">
+                Very Cold and windy
+            </div>
+            <div id="location" class="locationDiv">
+                Belfast, Northern Ireland
+            </div>
         </div>
 
         <div class="thirdRow">
@@ -29,7 +40,7 @@
         </div>
     </div>
 
-    <div class="hide">
+    <div id="form" class="hide">
         <div class="nikeLogo">
             <img alt="logo" src="../images/nLogo.jfif">
         </div>
@@ -43,7 +54,7 @@
         </div>
 
         <div class="buttonDiv">
-            <button>SEARCH</button>
+            <button id="submitBtn">SUBMIT</button>
         </div>
 
         <div class="notice">
