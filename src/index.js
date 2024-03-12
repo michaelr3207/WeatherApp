@@ -20,8 +20,8 @@ async function generateWeatherData(uiDisplay) {
         const response = await fetch(API_URL + uiDisplay.currentSubject, {mode: 'cors'});
         const fetchedData = await response.json();
         console.log(fetchedData);
-        // alert(fetchedData.current.temp_c);
-        const weatherLocation = new WeatherLocation(fetchedData.location.region, fetchedData.current.temp_c + '°C', fetchedData.current.condition.text);
+        // alert(fetchedData.current.condition.icon);
+        const weatherLocation = new WeatherLocation(fetchedData.location.region, fetchedData.current.temp_c + '°C', fetchedData.current.condition.text, fetchedData.current.humidity, fetchedData.current.condition.icon);
         addWeatherDataToUi(weatherLocation, uiDisplay);
     }
     catch (error) {
@@ -47,6 +47,8 @@ function addWeatherDataToUi(weatherLocation, uIDisplay) {
     uIDisplay.setUIDetails(weatherLocation.getDescription());
     uIDisplay.setUITLocation(weatherLocation.getName());
     uIDisplay.setUITemperature(weatherLocation.getTemperature());
+    uIDisplay.setUITempAndHumidityInThirdRow(weatherLocation.getTemperature(), weatherLocation.getHumidity());
+    uIDisplay.setWeatherImage(weatherLocation.getIcon());
 }
 
 function gatherFormData() {
