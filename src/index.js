@@ -39,7 +39,7 @@ function addEventListenerToButton(uIDisplay) {
     submitButton.addEventListener("click", () => {
         uIDisplay.currentSubject = gatherFormData();
         uIDisplay.displayAppAndHideForm();
-        generateWeatherData(uIDisplay);
+        generateWeatherData(uIDisplay).then(r => console.log('Fetching data') );
     });
 }
 
@@ -49,11 +49,9 @@ function addWeatherDataToUi(weatherLocation, uIDisplay) {
     uIDisplay.setUITemperature(weatherLocation.getTemperature());
 }
 
-
 function gatherFormData() {
     const formLocationBox = document.getElementById('locationBox');
     return formLocationBox.value;
 }
 
-// generateWeatherData();
 main();

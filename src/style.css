@@ -122,6 +122,41 @@ body, html {
     margin: auto;
 }
 
+.iconAndContentBox {
+    margin: auto;
+    /*border: 2px solid green;*/
+    width: 50%;
+    height: 60%;
+    display: flex;
+    margin-top: 3%;
+
+}
+
+.iconContainer {
+    /*border: 2px solid red;*/
+    width: 50%;
+}
+
+.textContainer {
+    /*border: 2px solid #00ff80;*/
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.humidity, .temperature {
+    /*border: 2px solid red;*/
+    height: 50%;
+    font-size: 150%;
+}
+
+.humidityValue, .temperatureValue {
+    /*border: 2px solid rebeccapurple;*/
+    height: 50%;
+    font-size: 150%;
+
+}
+
 
 /* FORM styling below */
 
