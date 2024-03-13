@@ -3,25 +3,20 @@ import {UIDisplay} from "./Classes/UIDisplay";
 import {WeatherLocation} from "./Classes/WeatherLocation";
 
 const API_URL = 'https://api.weatherapi.com/v1/current.json?key=9118f127dc5a4c16b72193619241003&q=';
-let currentSubject = 'london';
-
-// console.log(https://api.weatherapi.com/v1/current.json?key=9118f127dc5a4c16b72193619241003&q=london
-// )
 
 function main() {
     const uIDisplay = new UIDisplay('Weather App');
     addEventListenerToButton(uIDisplay);
-    generateWeatherData(uIDisplay);
+    generateWeatherData(uIDisplay).then(r => console.log(`Fetching Data`));
 }
 
 async function generateWeatherData(uiDisplay) {
     try {
-        const img = document.querySelector('img');
         const response = await fetch(API_URL + uiDisplay.currentSubject, {mode: 'cors'});
         const fetchedData = await response.json();
         console.log(fetchedData);
         // alert(fetchedData.current.condition.icon);
-        const weatherLocation = new WeatherLocation(fetchedData.location.region, fetchedData.current.temp_c + '°C', fetchedData.current.condition.text, fetchedData.current.humidity, fetchedData.current.condition.icon);
+        const weatherLocation = new WeatherLocation(`${fetchedData.location.region}, ${fetchedData.location.country}`, fetchedData.current.temp_c + '°C', fetchedData.current.condition.text, fetchedData.current.humidity, fetchedData.current.condition.icon);
         addWeatherDataToUi(weatherLocation, uiDisplay);
     }
     catch (error) {
