@@ -4,11 +4,15 @@
 }
 
 body, html {
-    background: linear-gradient(237deg, #091c41, rgb(192, 192, 248));
+    background: linear-gradient(237deg, #210a48, rgb(122, 187, 231));
     margin: 0;
     height: 100%;
     padding-top: 20px;
     padding-bottom: 10px;
+    background: #1C6EA4;
+    background: -moz-linear-gradient(-45deg, #1C6EA4 0%, #7a69c7 50%, #144E75 100%);
+    background: -webkit-linear-gradient(-45deg, #1c3ca4 0%, #2388CB 50%, #144E75 100%);
+    background: linear-gradient(135deg, #257bc2 0%, #8ad7e3 50%, #27137a 100%);
 }
 
 .appContainer {
