@@ -1,5 +1,5 @@
 import Thermometer from '../Images/thermometer-high.png'
-import Droplet from '../Images/water-outline-custom.png'
+import Droplet from '../Images/water.png'
 
 class UIDisplay {
 

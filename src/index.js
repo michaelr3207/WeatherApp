@@ -13,9 +13,12 @@ function main() {
 async function generateWeatherData(uiDisplay) {
     try {
         const response = await fetch(API_URL + uiDisplay.currentSubject, {mode: 'cors'});
-        const fetchedData = await response.json();
-        console.log(fetchedData);
-        const weatherLocation = new WeatherLocation(`${fetchedData.location.region}, ${fetchedData.location.country}`, fetchedData.current.temp_c + '°C', fetchedData.current.condition.text, fetchedData.current.humidity, fetchedData.current.condition.icon);
+        const fetchedWeatherData = await response.json();
+        console.log(fetchedWeatherData);
+        const weatherLocation = new WeatherLocation(`${fetchedWeatherData.location.region}, ${fetchedWeatherData.location.country}`,
+            fetchedWeatherData.current.temp_c + '°C',
+            fetchedWeatherData.current.condition.text, fetchedWeatherData.current.humidity,
+            fetchedWeatherData.current.condition.icon);
         addWeatherDataToUi(weatherLocation, uiDisplay);
     }
     catch (error) {
